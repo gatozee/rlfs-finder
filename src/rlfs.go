@@ -25,7 +25,7 @@ var port = flag.Int("p",8686,"Server port")
 var seqfile = flag.String("seqfile","","Sequence file")
 
 const (
-    version = "0.1.2"
+    version = "0.1.3"
     pageTop    = `<!DOCTYPE HTML><html><head>
 <title>RLFS Finder</title>
 <style>
@@ -39,7 +39,7 @@ textarea{font-family:monospace}
 </head>
 <body>
 <h3>RLFS Finder</h3>
-<p>Reference: Wongsurawat et al. Quantitative model of R-loop forming structures reveals a novel level of RNA-DNA interactome complexity. Nucleic Acids Res 40, e16 (2012)</p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3258121/" target="_new">Reference</a>: Wongsurawat et al. Quantitative model of R-loop forming structures reveals a novel level of RNA-DNA interactome complexity. Nucleic Acids Res 40, e16 (2012)</p>
 <p>Model: <b>RLFS = <span class="riz">RIZ</span>+<span class="linker">linker</span>+<span class="rez">REZ</span></b><p>`
 
     form       = `<form action="/" method="POST">
@@ -72,7 +72,11 @@ func main() {
     if *port < 1 || *port > 65535 {
         log.Fatal("Invalid port ",*port)
     }
-    fmt.Println("Open link http://127.0.0.1:"+strconv.Itoa(*port)+" in a web browser to access the web interface of this program")
+    var url string = "http://127.0.0.1:"+strconv.Itoa(*port)
+    fmt.Println("Open link "+url+" in a web browser to access the web interface of this program")
+    if err := openURL(url); err != nil {
+        log.Println("Unable to open link in browser")
+    }
     http.HandleFunc("/", homePage)
     if err := http.ListenAndServe(":"+strconv.Itoa(*port), nil); err != nil {
         log.Fatal("failed to start server", err)
