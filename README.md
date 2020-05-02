@@ -1,6 +1,6 @@
 # rlfs-finder
 
-A simple app to find RLFS, with web user interface.
+A simple app to find RLFS, with web user interface and builtin web server.
 
 ```
 RLFS = RIZ+linker+REZ
