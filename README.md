@@ -9,7 +9,7 @@ linker: 0~50nt
 REZ: 100~2000nt, 40% G
 ```
 
-Reference: Wongsurawat et al. Quantitative model of R-loop forming structures reveals a novel level of RNA-DNA interactome complexity. Nucleic Acids Res 40, e16 (2012)
+[Reference](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3258121/): Wongsurawat et al. Quantitative model of R-loop forming structures reveals a novel level of RNA-DNA interactome complexity. Nucleic Acids Res 40, e16 (2012)
 
 ![screenshot](Screenshot1.png)
 ![screenshot](Screenshot2.png)
