@@ -1,0 +1,7 @@
+0.1.2:
+    Added a commandline option to read sequence from file without starting web server
+
+0.1.1:
+    Can properly handle multiple matches
+
+0.1.0 Initial release
