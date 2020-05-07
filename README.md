@@ -13,3 +13,5 @@ REZ: 100~2000nt, 40% G
 
 ![screenshot](Screenshot1.png)
 ![screenshot](Screenshot2.png)
+
+[![Run on Repl.it](https://repl.it/badge/github/gatozee/rlfs-finder)](https://repl.it/github/gatozee/rlfs-finder)
